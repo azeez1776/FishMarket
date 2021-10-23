@@ -1,5 +1,52 @@
 .item {
-  width: 10em;
-  height: 6em;
-  background-color: aquamarine;
+  width: 20em;
+  height: 16em;
+  max-height: 18em;
+  background-color: white;
+  margin: 2em;
+  padding: 0%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.item_img {
+  background-color: white;
+  width: 20em;
+  height: 10em;
+  border-bottom: 1px solid gainsboro;
+}
+
+.img_body {
+  width: 20em;
+}
+
+.item_title {
+  margin: 0;
+}
+
+.description {
+  display: block;
+}
+
+.description > small {
+  display: block;
+}
+
+.item_btn_price {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item_btn {
+  background-color: #03045e;
+  border: 0;
+  color: white;
+  height: 2em;
+  border-radius: 0.3em;
+  margin: 0.5em;
+}
+
+.item_price {
+  font-size: medium;
 }
