@@ -50,3 +50,8 @@
 .item_price {
   font-size: medium;
 }
+
+.explore {
+  display: flex;
+  flex-wrap: wrap;
+}
