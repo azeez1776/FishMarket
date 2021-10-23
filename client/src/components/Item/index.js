@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../assets/CSS/styles.css'
 
 function Item() {
     return (
