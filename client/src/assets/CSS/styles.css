@@ -51,7 +51,22 @@
   font-size: medium;
 }
 
-.explore {
+.explore_item {
   display: flex;
   flex-wrap: wrap;
+}
+
+.nav_header {
+  background-color: #03045e;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_title {
+  color: white;
+  margin-left: 0.5em;
+}
+
+.nav_img {
+  width: 5em;
 }

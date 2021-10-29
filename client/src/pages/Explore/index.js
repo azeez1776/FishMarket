@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from '../../components/Item'
+import Nav from '../../components/Nav'
 
 
 function Explore() {
@@ -33,14 +34,17 @@ function Explore() {
 
     return (
         <div className="explore">
-            {items.map((item, id) =>
-                <Item
-                    title={item.title}
-                    description={item.description}
-                    price={item.price}
-                    img={item.img}
-                />
-            )}
+            <Nav />
+            <div className="explore_item">
+                {items.map((item, id) =>
+                    <Item
+                        title={item.title}
+                        description={item.description}
+                        price={item.price}
+                        img={item.img}
+                    />
+                )}
+            </div>
 
         </div>
     )
