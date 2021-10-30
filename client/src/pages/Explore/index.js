@@ -34,6 +34,12 @@ function Explore() {
     ]
 
     const [showInfo, setShowInfo] = useState(false)
+    const [itemInfo, setItemInfo] = useState({
+        title: '',
+        description: '',
+        price: '',
+        img: ''
+    })
 
     const moreInfo = (itemData) => {
         setShowInfo(true)
@@ -45,7 +51,7 @@ function Explore() {
             <Nav />
             {showInfo ? (
                 <ItemDetail
-
+                    title={myitem.title}
                 />
             ) :
                 (<div className="explore_item">
