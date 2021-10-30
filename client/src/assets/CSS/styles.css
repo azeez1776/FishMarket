@@ -82,3 +82,8 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+.item_select {
+  width: 5em;
+  height: 2em;
+}
