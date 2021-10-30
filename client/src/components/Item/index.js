@@ -2,7 +2,7 @@ import React from 'react'
 import '../../assets/CSS/styles.css'
 
 
-function Item({ title, price, description, img }) {
+function Item({ title, price, description, img, onCall }) {
     return (
         <div className="item">
             <div className="item_img">
@@ -18,7 +18,7 @@ function Item({ title, price, description, img }) {
                         <small className="item_price"><b>Price:</b>{price}</small>
                     </div>
                     <div>
-                        <button className="item_btn">ADD TO CART</button>
+                        <button className="item_btn" onClick={onCall}>ADD TO CART</button>
                     </div>
                 </div>
             </div>
