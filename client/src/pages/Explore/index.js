@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Item from '../../components/Item'
 import Nav from '../../components/Nav'
+import ItemDetail from '../ItemDetail.js'
 
 
 function Explore() {
@@ -36,23 +37,28 @@ function Explore() {
 
     const moreInfo = (itemData) => {
         setShowInfo(true)
-        const itemData = itemData
+        const myitem = itemData
     }
 
     return (
         <div className="explore">
             <Nav />
-            <div className="explore_item">
-                {items.map((item, id) =>
-                    <Item
-                        title={item.title}
-                        description={item.description}
-                        price={item.price}
-                        img={item.img}
-                        onCall={(item) => moreInfo}
-                    />
-                )}
-            </div>
+            {showInfo ? (
+                <ItemDetail
+
+                />
+            ) :
+                (<div className="explore_item">
+                    {items.map((item, id) =>
+                        <Item
+                            title={item.title}
+                            description={item.description}
+                            price={item.price}
+                            img={item.img}
+                            onCall={() => moreInfo(item)}
+                        />
+                    )}
+                </div>)}
 
         </div>
     )
