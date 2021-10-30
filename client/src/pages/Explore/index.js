@@ -34,8 +34,9 @@ function Explore() {
 
     const [showInfo, setShowInfo] = useState(false)
 
-    const moreInfo = () => {
-
+    const moreInfo = (itemData) => {
+        setShowInfo(true)
+        const itemData = itemData
     }
 
     return (
@@ -48,7 +49,7 @@ function Explore() {
                         description={item.description}
                         price={item.price}
                         img={item.img}
-                        onCall={ }
+                        onCall={(item) => moreInfo}
                     />
                 )}
             </div>
