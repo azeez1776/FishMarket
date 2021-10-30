@@ -53,6 +53,7 @@ function Explore() {
                 <ItemDetail
                     title={itemInfo.title}
                     description={itemInfo.description}
+                    img={itemInfo.img}
                 />
             ) :
                 (<div className="explore_item">
