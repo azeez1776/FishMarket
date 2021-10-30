@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Item from '../../components/Item'
 import Nav from '../../components/Nav'
 
@@ -32,6 +32,12 @@ function Explore() {
         },
     ]
 
+    const [showInfo, setShowInfo] = useState(false)
+
+    const moreInfo = () => {
+
+    }
+
     return (
         <div className="explore">
             <Nav />
@@ -42,6 +48,7 @@ function Explore() {
                         description={item.description}
                         price={item.price}
                         img={item.img}
+                        onCall={ }
                     />
                 )}
             </div>
