@@ -24,7 +24,9 @@ function ItemDetail({ title, price, description, img }) {
                     <option value="5">5</option>
                 </select>
             </div>
-            {/* Button */}
+            <div className="item_detail_btn">
+                <button className="item_btn_1">ADD TO CART</button>
+            </div>
         </div>
     )
 }

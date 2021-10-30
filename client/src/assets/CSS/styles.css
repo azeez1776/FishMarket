@@ -38,7 +38,8 @@
   align-items: center;
 }
 
-.item_btn {
+.item_btn,
+.item_btn_1 {
   background-color: #03045e;
   border: 0;
   color: white;
@@ -47,9 +48,17 @@
   margin: 0.5em;
 }
 
-.item_btn:hover {
+.item_btn:hover,
+.item_btn_1:hover {
   cursor: pointer;
   background-color: #01022b;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.item_btn_1 {
+  height: 3em;
+  width: 9em;
 }
 
 .item_price {
