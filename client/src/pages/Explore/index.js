@@ -43,7 +43,7 @@ function Explore() {
 
     const moreInfo = (itemData) => {
         setShowInfo(true)
-        const myitem = itemData
+        setItemInfo(itemData)
     }
 
     return (
@@ -51,7 +51,8 @@ function Explore() {
             <Nav />
             {showInfo ? (
                 <ItemDetail
-                    title={myitem.title}
+                    title={itemInfo.title}
+                    description={itemInfo.description}
                 />
             ) :
                 (<div className="explore_item">

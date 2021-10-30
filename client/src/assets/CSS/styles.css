@@ -75,3 +75,10 @@
 .nav_img {
   width: 5em;
 }
+
+.item_detail_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
