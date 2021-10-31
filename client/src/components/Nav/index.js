@@ -1,8 +1,14 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 import '../../assets/CSS/styles.css'
+import { useSelector } from 'react-redux'
+
+
+
 
 function Nav() {
+    const count = useSelector((state) => state.counter.value)
+
     return (
         <div className="nav">
             <div className="nav_header">
@@ -13,7 +19,7 @@ function Nav() {
                     </div>
                     <div className="basket">
                         <img className="nav_basket" src="Images/basket.png" alt="basket" />
-                        <span className="basket_dot">1</span>
+                        <span className="basket_dot">{count}</span>
                     </div>
                 </div>
             </div>

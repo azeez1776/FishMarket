@@ -1,14 +1,11 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { increment } from '../../features/counter/counterSlice'
 
 
 function ItemDetail({ title, price, description, img }) {
 
-    const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
-
-
 
     return (
         <div className="item_detail">
