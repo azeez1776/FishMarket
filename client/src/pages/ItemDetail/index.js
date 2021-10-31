@@ -26,6 +26,7 @@ function ItemDetail() {
                     <div className="item_detail_info">
                         <h2>{itemTitle}</h2>
                         <p>{itemDescription}</p>
+                        <p>Price: {itemPrice}</p>
                     </div>
                     <div className="item_detail_qty">
                         <label for="cars">Qty: </label>
