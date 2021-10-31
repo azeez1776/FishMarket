@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Item from '../../components/Item'
 import Nav from '../../components/Nav'
-import ItemDetail from '../ItemDetail.js'
+import ItemDetail from '../ItemDetail/index.js'
 
 
 function Explore() {
@@ -14,20 +14,20 @@ function Explore() {
             img: 'Images/salmon.jpeg'
         },
         {
-            title: 'salmon',
-            price: '2500tsh',
+            title: 'tilapia',
+            price: '3500tsh',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
             img: 'Images/salmon.jpeg'
         },
         {
-            title: 'salmon',
-            price: '2500tsh',
+            title: 'Squid',
+            price: '4500tsh',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
             img: 'Images/salmon.jpeg'
         },
         {
-            title: 'salmon',
-            price: '2500tsh',
+            title: 'Crab',
+            price: '5500tsh',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
             img: 'Images/salmon.jpeg'
         },
@@ -49,24 +49,22 @@ function Explore() {
     return (
         <div className="explore">
             <Nav />
-            {showInfo ? (
-                <ItemDetail
-                    title={itemInfo.title}
-                    description={itemInfo.description}
-                    img={itemInfo.img}
-                />
-            ) :
-                (<div className="explore_item">
-                    {items.map((item, id) =>
-                        <Item
-                            title={item.title}
-                            description={item.description}
-                            price={item.price}
-                            img={item.img}
-                            onCall={() => moreInfo(item)}
-                        />
-                    )}
-                </div>)}
+            <div className="explore_item">
+                {items.map((item, id) =>
+                    <Item
+                        title={item.title}
+                        description={item.description}
+                        price={item.price}
+                        img={item.img}
+                        onCall={() => {
+                            localStorage.setItem('itemTitle', item.title);
+                            localStorage.setItem('itemDescription', item.description)
+                            localStorage.setItem('itemPrice', item.price)
+                            localStorage.setItem('itemImg', item.img)
+                        }}
+                    />
+                )}
+            </div>
 
         </div>
     )

@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 
 
 function Nav() {
-    const count = useSelector((state) => state.counter.value)
+    // const count = useSelector((state) => state.counter.value)
 
     return (
         <div className="nav">
@@ -19,7 +19,7 @@ function Nav() {
                     </div>
                     <div className="basket">
                         <img className="nav_basket" src="Images/basket.png" alt="basket" />
-                        <span className="basket_dot">{count}</span>
+                        <span className="basket_dot">1</span>
                     </div>
                 </div>
             </div>

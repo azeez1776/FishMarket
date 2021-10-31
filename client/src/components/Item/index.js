@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../assets/CSS/styles.css'
+
 
 
 function Item({ title, price, description, img, onCall }) {
@@ -18,7 +20,14 @@ function Item({ title, price, description, img, onCall }) {
                         <small className="item_price"><b>Price:</b>{price}</small>
                     </div>
                     <div>
-                        <button className="item_btn" onClick={onCall}>ADD TO CART</button>
+                        <button className="item_btn" >
+                            <Link
+                                to="/item"
+                                onClick={onCall}
+                            >
+                                ADD TO CART
+                            </Link>
+                        </button>
                     </div>
                 </div>
             </div>
