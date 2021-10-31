@@ -48,7 +48,7 @@ function Explore() {
 
     return (
         <div className="explore">
-            <Nav />
+            {/* <Nav /> */}
             <div className="explore_item">
                 {items.map((item, id) =>
                     <Item

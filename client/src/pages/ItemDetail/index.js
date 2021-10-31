@@ -1,11 +1,12 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Nav from '../../components/Nav'
 import { increment } from '../../features/counter/counterSlice'
 
 
 function ItemDetail() {
 
+    const count = useSelector(state => state.value)
     const dispatch = useDispatch()
 
     const itemTitle = localStorage.getItem('itemTitle');
@@ -15,7 +16,7 @@ function ItemDetail() {
 
     return (
         <div>
-            <Nav />
+            {/* <Nav /> */}
             <div className="item_detail">
                 <div className="item_detail1">
                     <div className="item_detail_img">
