@@ -147,6 +147,11 @@
   width: 2em;
 }
 
+.add_link {
+  text-decoration: none;
+  color: white;
+}
+
 @media only screen and (max-width: 700px) {
   .title {
     display: flex;

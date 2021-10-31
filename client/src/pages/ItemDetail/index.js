@@ -4,9 +4,14 @@ import Nav from '../../components/Nav'
 import { increment } from '../../features/counter/counterSlice'
 
 
-function ItemDetail({ title, price, description, img }) {
+function ItemDetail() {
 
     const dispatch = useDispatch()
+
+    const itemTitle = localStorage.getItem('itemTitle');
+    const itemPrice = localStorage.getItem('itemPrice');
+    const itemDescription = localStorage.getItem('itemDescription')
+    const itemImg = localStorage.getItem('itemImg');
 
     return (
         <div>
@@ -14,13 +19,13 @@ function ItemDetail({ title, price, description, img }) {
             <div className="item_detail">
                 <div className="item_detail1">
                     <div className="item_detail_img">
-                        <img src={img} alt={title} />
+                        <img src={itemImg} alt={itemTitle} />
                     </div>
                 </div>
                 <div className="item_detail2">
                     <div className="item_detail_info">
-                        <h2>{title}</h2>
-                        <p>{description}</p>
+                        <h2>{itemTitle}</h2>
+                        <p>{itemDescription}</p>
                     </div>
                     <div className="item_detail_qty">
                         <label for="cars">Qty: </label>

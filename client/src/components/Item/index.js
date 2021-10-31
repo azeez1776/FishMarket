@@ -22,6 +22,7 @@ function Item({ title, price, description, img, onCall }) {
                     <div>
                         <button className="item_btn" >
                             <Link
+                                className="add_link"
                                 to="/item"
                                 onClick={onCall}
                             >
