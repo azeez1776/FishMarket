@@ -1,7 +1,12 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment } from '../../features/counter/counterSlice'
 
 
 function ItemDetail({ title, price, description, img }) {
+
+    const count = useSelector((state) => state.counter.value)
+    const dispatch = useDispatch()
 
 
 
@@ -28,7 +33,7 @@ function ItemDetail({ title, price, description, img }) {
                     </select>
                 </div>
                 <div className="item_detail_btn">
-                    <button className="item_btn_1">ADD TO CART</button>
+                    <button className="item_btn_1" onClick={() => dispatch(increment())}>ADD TO CART</button>
                 </div>
             </div>
         </div>
