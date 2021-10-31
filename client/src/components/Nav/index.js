@@ -13,6 +13,7 @@ function Nav() {
                     </div>
                     <div className="basket">
                         <img className="nav_basket" src="Images/basket.png" alt="basket" />
+                        <span className="basket_dot">1</span>
                     </div>
                 </div>
             </div>

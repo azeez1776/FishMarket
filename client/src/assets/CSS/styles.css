@@ -130,6 +130,18 @@
   display: flex;
 }
 
+.basket_dot {
+  background-color: red;
+  object-fit: contain;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1em;
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  margin-left: -1em;
+}
+
 .nav_basket {
   object-fit: contain;
   width: 2em;
