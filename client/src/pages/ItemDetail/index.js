@@ -7,9 +7,10 @@ import { increment } from '../../features/counter/counterSlice'
 
 function ItemDetail() {
 
-    const count = useSelector(state => state.value)
-    const showModal = useSelector(state => state.truthy)
+    const count = useSelector(state => state.counter.value)
+    const modal = useSelector(state => state.truthy.truthy)
     const dispatch = useDispatch()
+
 
     const itemTitle = localStorage.getItem('itemTitle');
     const itemPrice = localStorage.getItem('itemPrice');
@@ -19,7 +20,7 @@ function ItemDetail() {
     return (
         <div>
             {/* <Nav /> */}
-            {showModal && (Modal)}
+            {modal && <Modal />}
             <div className="item_detail">
                 <div className="item_detail1">
                     <div className="item_detail_img">

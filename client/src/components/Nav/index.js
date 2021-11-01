@@ -20,7 +20,7 @@ function Nav() {
                         <img className="nav_img" src="Images/fishbone.png" alt="fishbone" />
                         <h1 className="nav_title">FISH MARKET</h1>
                     </div>
-                    <div className="basket" onClick={dispatch(showModal())}>
+                    <div className="basket" onClick={() => dispatch(showModal())}>
                         <img className="nav_basket" src="Images/basket.png" alt="basket" />
                         {count ? <span className="basket_dot">{count}</span> : <span className="basket_zero"></span>}
                     </div>
