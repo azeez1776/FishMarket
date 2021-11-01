@@ -3,12 +3,14 @@ import React from 'react'
 import '../../assets/CSS/styles.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../../features/counter/counterSlice'
+import { showModal } from '../../features/modalTruthy/modalTruthy'
 
 
 
 
 function Nav() {
     const count = useSelector((state) => state.counter.value)
+    const dispatch = useDispatch()
 
     return (
         <div className="nav">
@@ -18,7 +20,7 @@ function Nav() {
                         <img className="nav_img" src="Images/fishbone.png" alt="fishbone" />
                         <h1 className="nav_title">FISH MARKET</h1>
                     </div>
-                    <div className="basket">
+                    <div className="basket" onClick={dispatch(showModal())}>
                         <img className="nav_basket" src="Images/basket.png" alt="basket" />
                         {count ? <span className="basket_dot">{count}</span> : <span className="basket_zero"></span>}
                     </div>
