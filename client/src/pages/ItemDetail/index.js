@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import Modal from '../../components/Modal'
 import Nav from '../../components/Nav'
 import { increment } from '../../features/counter/counterSlice'
 
@@ -18,7 +19,7 @@ function ItemDetail() {
     return (
         <div>
             {/* <Nav /> */}
-
+            {showModal && (Modal)}
             <div className="item_detail">
                 <div className="item_detail1">
                     <div className="item_detail_img">
