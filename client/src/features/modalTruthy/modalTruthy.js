@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import counterSlice from '../counter/counterSlice'
 
 export const modalTruthy = createSlice({
     name: 'truthy',
@@ -13,5 +12,5 @@ export const modalTruthy = createSlice({
     }
 })
 
-export const { showModal } = counterSlice.actions
+export const { showModal } = modalTruthy.actions
 export default modalTruthy.reducer;
