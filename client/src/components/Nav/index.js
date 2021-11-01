@@ -1,13 +1,14 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 import '../../assets/CSS/styles.css'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../../features/counter/counterSlice'
 
 
 
 
 function Nav() {
-    // const count = useSelector((state) => state.counter.value)
+    const count = useSelector((state) => state.counter.value)
 
     return (
         <div className="nav">
@@ -19,7 +20,7 @@ function Nav() {
                     </div>
                     <div className="basket">
                         <img className="nav_basket" src="Images/basket.png" alt="basket" />
-                        <span className="basket_dot">1</span>
+                        {count ? <span className="basket_dot">{count}</span> : <span className="basket_zero"></span>}
                     </div>
                 </div>
             </div>

@@ -130,7 +130,8 @@
   display: flex;
 }
 
-.basket_dot {
+.basket_dot,
+.basket_zero {
   background-color: red;
   object-fit: contain;
   width: 1.5em;
@@ -140,6 +141,10 @@
   text-align: center;
   margin-top: 1em;
   margin-left: -1em;
+}
+
+.basket_zero {
+  visibility: hidden;
 }
 
 .nav_basket {
