@@ -9,8 +9,10 @@ router.get('/', async (req, res) => {
         const item = await Items.find()
         res.json(item)
     }
-    catch (error) {
-        res.send('error in getting items')
+    catch (err) {
+        res.send(`error in getting items ${err}`)
+        console.log(err)
     }
 })
 
+module.exports = router;
