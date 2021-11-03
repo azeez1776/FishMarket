@@ -1,4 +1,6 @@
 const express = require('express')
+const connectDB = require('../server/config/db')
+connectDB()
 
 
 const port = 5000;
