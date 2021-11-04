@@ -1,0 +1,1 @@
+export const getItems = 'http://localhost:5000/api/items/';
