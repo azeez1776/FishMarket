@@ -15,10 +15,25 @@ router.get('/', async (req, res) => {
     }
 });
 
-// router.post('/', async (req, res) => {
-//     try {
-//         const item = await ItemSchema
-//     }
-// })
+router.post('/', async (req, res) => {
+
+    const { name, description, price, img } = req.body;
+
+    try {
+        const newItem = new ItemSchema({
+            name,
+            description,
+            price,
+            img
+        });
+
+        const item = await newItem.save();
+        res.json(item)
+    }
+
+    catch (error) {
+        res.send(`${error} 500`)
+    }
+})
 
 module.exports = router;
