@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Item from '../../components/Item'
 import Nav from '../../components/Nav'
 import ItemDetail from '../ItemDetail/index.js'
+import { getItems } from '../../Data'
 
 
 function Explore() {
