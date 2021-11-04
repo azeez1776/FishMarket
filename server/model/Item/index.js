@@ -10,7 +10,7 @@ const ItemSchema = mongoose.Schema({
         required: true
     },
     price: {
-        type: Number,
+        type: String,
         required: true
     },
     img: {
@@ -19,4 +19,4 @@ const ItemSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('item', ItemSchema);
+module.exports = mongoose.model('items', ItemSchema);
