@@ -1,12 +1,12 @@
 const express = require('express');
-const Items = require('../../model/Item/')
+const ItemSchema = require('../../model/Item/')
 
 
 const router = express.Router()
 
 router.get('/', async (req, res) => {
     try {
-        const item = await Items.find()
+        const item = await ItemSchema.find({ name: 'salmon' })
         res.json(item)
     }
     catch (err) {
