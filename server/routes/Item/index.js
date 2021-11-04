@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
         res.json(items)
     }
     catch (err) {
-        res.send(`${error}, 500 server error}`)
+        res.status(500).send(error)
     }
 });
 
@@ -32,7 +32,7 @@ router.post('/', async (req, res) => {
     }
 
     catch (error) {
-        res.send(`${error}, 500 server error`)
+        res.status(500).send(error)
     }
 })
 
@@ -60,7 +60,19 @@ router.put('/:id', async (req, res) => {
         res.json(item)
     }
     catch (error) {
-        res.send(`${error}, 5001 server error`)
+        res.status(500).send(error)
+    }
+})
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const item = await ItemSchema.findById(req.params.id);
+        if (!item) res.status(404).send('Not found');
+        await ItemSchema.findByIdAndDelete(req.params.id)
+        res.send('Item deleted successfully')
+    }
+    catch (error) {
+        res.status(500).send(error)
     }
 })
 
