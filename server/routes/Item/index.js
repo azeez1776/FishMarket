@@ -1,4 +1,5 @@
 const express = require('express');
+const { findByIdAndUpdate } = require('../../model/Item');
 const ItemSchema = require('../../model/Item')
 
 
@@ -10,8 +11,7 @@ router.get('/', async (req, res) => {
         res.json(items)
     }
     catch (err) {
-        res.send(`error in getting items ${err}`)
-        console.log(err)
+        res.send(`${error}, 500 server error}`)
     }
 });
 
@@ -32,7 +32,35 @@ router.post('/', async (req, res) => {
     }
 
     catch (error) {
-        res.send(`${error} 500`)
+        res.send(`${error}, 500 server error`)
+    }
+})
+
+router.put('/:id', async (req, res) => {
+    const { name, description, price, img } = req.body;
+    const itemField = {};
+
+    if (name) itemField.name = name;
+    if (description) itemField.description = description;
+    if (price) itemField.price = price;
+    if (img) itemField.img = img;
+
+    try {
+        let item = await ItemSchema.findById(req.params.id);
+        if (!item) {
+            res.send('404 item not found')
+        }
+
+        item = await ItemSchema.findByIdAndUpdate(
+            req.params.id,
+            { $set: itemField },
+            { new: true }
+        );
+
+        res.json(item)
+    }
+    catch (error) {
+        res.send(`${error}, 5001 server error`)
     }
 })
 
