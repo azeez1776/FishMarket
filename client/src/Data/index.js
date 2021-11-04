@@ -1,6 +1,6 @@
 import { GETITEMS } from "../API";
 
-const getItems = async () => {
+export const getItems = async () => {
     try {
         const res = await fetch(GETITEMS);
         const data = res.json();

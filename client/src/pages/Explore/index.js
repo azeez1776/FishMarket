@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Item from '../../components/Item'
 import Nav from '../../components/Nav'
 import ItemDetail from '../ItemDetail/index.js'
@@ -32,20 +32,14 @@ function Explore() {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
             img: 'Images/salmon.jpeg'
         },
-    ]
+    ];
 
-    const [showInfo, setShowInfo] = useState(false)
-    const [itemInfo, setItemInfo] = useState({
-        title: '',
-        description: '',
-        price: '',
-        img: ''
-    })
+    const [item, setItem] = useState([]);
 
-    const moreInfo = (itemData) => {
-        setShowInfo(true)
-        setItemInfo(itemData)
-    }
+    useEffect(() => {
+        setItem(getItems());
+        console.log(item)
+    }, [])
 
     return (
         <div className="explore">
