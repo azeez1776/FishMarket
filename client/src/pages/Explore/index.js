@@ -7,49 +7,50 @@ import { getItems } from '../../Data'
 
 function Explore() {
 
-    const items = [
-        {
-            title: 'salmon',
-            price: '2500tsh',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            img: 'Images/salmon.jpeg'
-        },
-        {
-            title: 'tilapia',
-            price: '3500tsh',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            img: 'Images/salmon.jpeg'
-        },
-        {
-            title: 'Squid',
-            price: '4500tsh',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            img: 'Images/salmon.jpeg'
-        },
-        {
-            title: 'Crab',
-            price: '5500tsh',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            img: 'Images/salmon.jpeg'
-        },
-    ];
+    // const items = [
+    //     {
+    //         title: 'salmon',
+    //         price: '2500tsh',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+    //         img: 'Images/salmon.jpeg'
+    //     },
+    //     {
+    //         title: 'tilapia',
+    //         price: '3500tsh',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+    //         img: 'Images/salmon.jpeg'
+    //     },
+    //     {
+    //         title: 'Squid',
+    //         price: '4500tsh',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+    //         img: 'Images/salmon.jpeg'
+    //     },
+    //     {
+    //         title: 'Crab',
+    //         price: '5500tsh',
+    //         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+    //         img: 'Images/salmon.jpeg'
+    //     },
+    // ];
 
-    const [item, setItem] = useState([]);
+    const [items, setItems] = useState([]);
 
     useEffect(async () => {
 
         const data = await getItems();
-        setItem(data)
+        setItems(data)
 
     }, [])
 
-    console.log(item)
+    console.log(items)
     return (
         <div className="explore">
             {/* <Nav /> */}
             <div className="explore_item">
-                {items.map((item, id) =>
+                {items.map((item) =>
                     <Item
+                        id={item.id}
                         title={item.title}
                         description={item.description}
                         price={item.price}
