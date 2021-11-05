@@ -36,11 +36,14 @@ function Explore() {
 
     const [item, setItem] = useState([]);
 
-    useEffect(() => {
-        setItem(getItems());
-        console.log(item)
+    useEffect(async () => {
+
+        const data = await getItems();
+        setItem(data)
+
     }, [])
 
+    console.log(item)
     return (
         <div className="explore">
             {/* <Nav /> */}

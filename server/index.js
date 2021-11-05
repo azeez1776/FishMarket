@@ -3,17 +3,17 @@ const connectDB = require('../server/config/db')
 const cors = require('cors');
 connectDB()
 
-let corsOptions = {
-    origin: 'http://example.com',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
 }
 
-app.use(cors(corsOptions))
 
 
 const port = 5000;
 const app = express();
 
+app.use(cors(corsOptions))
 app.use(express.json({ extended: false }))
 app.use('/api/items', require('./routes/Item'))
 
