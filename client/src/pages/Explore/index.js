@@ -56,7 +56,7 @@ function Explore() {
                         price={item.price}
                         img={item.img}
                         onCall={() => {
-                            localStorage.setItem('itemTitle', item.title);
+                            localStorage.setItem('itemTitle', item.name);
                             localStorage.setItem('itemDescription', item.description)
                             localStorage.setItem('itemPrice', item.price)
                             localStorage.setItem('itemImg', item.img)
