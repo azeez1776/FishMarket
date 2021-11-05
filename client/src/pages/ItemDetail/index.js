@@ -19,18 +19,17 @@ function ItemDetail() {
 
     return (
         <div>
-            {/* <Nav /> */}
             {modal && <Modal />}
-            <div className="item_detail">
+            <div className={modal ? "item_false" : "item_detail"}>
                 <div className="item_detail1">
                     <div className="item_detail_img">
-                        <img src={itemImg} alt={itemTitle} />
+                        <img className="item_detail_img_1" src={itemImg} alt={itemTitle} />
                     </div>
                 </div>
                 <div className="item_detail2">
                     <div className="item_detail_info">
                         <h2>{itemTitle}</h2>
-                        <p>{itemDescription}</p>
+                        <p className="item_detail_info_desc">{itemDescription}</p>
                         <p>Price: {itemPrice}</p>
                     </div>
                     <div className="item_detail_qty">
