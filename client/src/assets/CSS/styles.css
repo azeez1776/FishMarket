@@ -12,12 +12,13 @@
 .item_img {
   background-color: white;
   width: 20em;
-  height: 10em;
+  height: 12em;
   border-bottom: 1px solid gainsboro;
 }
 
 .img_body {
   width: 20em;
+  height: 12em;
 }
 
 .item_title {

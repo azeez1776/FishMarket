@@ -51,8 +51,8 @@ function Explore() {
                 {items.map((item) =>
                     <Item
                         id={item.id}
-                        title={item.title}
-                        description={item.description}
+                        title={item.name}
+                        // description={item.description}
                         price={item.price}
                         img={item.img}
                         onCall={() => {
