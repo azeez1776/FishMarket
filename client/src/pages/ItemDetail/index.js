@@ -27,7 +27,7 @@ function ItemDetail() {
     }
 
     return (
-        <div>
+        <div className={modal ? "modal_div" : ""}>
             {modal && <Modal />}
             <div className={modal ? "item_false" : "item_detail"}>
                 <div className="item_detail1">

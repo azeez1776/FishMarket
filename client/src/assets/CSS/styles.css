@@ -130,17 +130,16 @@
 }
 
 .modal {
-  width: 100%;
+  width: 50em;
 }
 
-.modal_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 3em;
-  width: 50%;
-  height: 50%;
-  border: 1px solid grey;
+.modal_div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal_description {
+  border: 1px solid #01022b;
 }
 
 .modal_header {
