@@ -10,9 +10,9 @@ function Modal() {
                     <h1 className="modal_title">Basket</h1>
                 </div>
                 <div className="modal_description">
-    <div className="modal_item">
-        </div>
-        </div>
+                    <div className="modal_item">
+                    </div>
+                </div>
             </div>
         </div>
     )

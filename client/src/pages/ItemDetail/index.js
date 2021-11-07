@@ -17,6 +17,15 @@ function ItemDetail() {
     const itemDescription = localStorage.getItem('itemDescription')
     const itemImg = localStorage.getItem('itemImg');
 
+    const onCall = (cart) => {
+        localStorage.setItem('cartItemTitle', cart.title);
+        localStorage.setItem('cartItemPrice', cart.price);
+        localStorage.setItem('cartItemDescription', cart.description);
+        localStorage.setItem('cartItemImage', cart.image);
+
+        dispatch(increment());
+    }
+
     return (
         <div>
             {modal && <Modal />}
