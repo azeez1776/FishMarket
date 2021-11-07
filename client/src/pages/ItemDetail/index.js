@@ -17,11 +17,11 @@ function ItemDetail() {
     const itemDescription = localStorage.getItem('itemDescription')
     const itemImg = localStorage.getItem('itemImg');
 
-    const onCall = (cart) => {
-        localStorage.setItem('cartItemTitle', cart.title);
-        localStorage.setItem('cartItemPrice', cart.price);
-        localStorage.setItem('cartItemDescription', cart.description);
-        localStorage.setItem('cartItemImage', cart.image);
+    const onCall = () => {
+        localStorage.setItem('cartItemTitle', itemTitle);
+        localStorage.setItem('cartItemPrice', itemPrice);
+        localStorage.setItem('cartItemDescription', itemDescription);
+        localStorage.setItem('cartItemImage', itemImg);
 
         dispatch(increment());
     }
@@ -52,7 +52,7 @@ function ItemDetail() {
                         </select>
                     </div>
                     <div className="item_detail_btn">
-                        <button className="item_btn_1" onClick={() => dispatch(increment())}>ADD TO CART</button>
+                        <button className="item_btn_1" onClick={onCall}>ADD TO CART</button>
                     </div>
                 </div>
             </div>
