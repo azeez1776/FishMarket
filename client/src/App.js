@@ -5,6 +5,7 @@ import ItemDetail from './pages/ItemDetail/index.js';
 import Nav from './components/Nav'
 import store from './app/store'
 import { Provider } from 'react-redux'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           </Switch>
         </Router>
       </Provider>
+      <Footer />
     </div>
   );
 }
