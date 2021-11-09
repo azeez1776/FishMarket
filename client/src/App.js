@@ -1,5 +1,4 @@
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
-import './App.css';
 import Explore from './pages/Explore/index';
 import ItemDetail from './pages/ItemDetail/index.js';
 import Nav from './components/Nav'

@@ -140,6 +140,7 @@
 .modal_div {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .modal_header {
