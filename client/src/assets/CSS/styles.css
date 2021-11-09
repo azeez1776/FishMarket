@@ -131,24 +131,30 @@
 
 .modal {
   width: 50em;
+  border: 1px solid #03045e;
+  margin: 5em;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal_div {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.modal_description {
-  border: 1px solid #01022b;
+  display: flex;
+  justify-content: center;
 }
 
 .modal_header {
   background-color: #03045e;
   width: 100%;
+  height: auto;
 }
 
 .modal_title {
   color: white;
+}
+
+.modal_item {
+  display: flex;
+  justify-content: center;
 }
 
 .item_select {

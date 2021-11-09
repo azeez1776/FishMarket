@@ -11,10 +11,9 @@ function Modal() {
             </div>
             <div className="modal_description">
                 <div className="modal_item">
+                    <h4 className="modal_title1">Salmon</h4>
                     <img src='Images/salmon.jpeg' alt='Salmon ' className="modal_img" />
-                    <h3 className="modal_title">Salmon</h3>
                     <p className="modal_price">2500</p>
-
                 </div>
             </div>
         </div>
