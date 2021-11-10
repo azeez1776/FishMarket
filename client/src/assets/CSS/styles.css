@@ -130,7 +130,7 @@
 }
 
 .modal {
-  width: 50em;
+  width: 20em;
   border: 1px solid #03045e;
   margin: 5em;
   display: flex;
@@ -156,6 +156,12 @@
 .modal_item {
   display: flex;
   justify-content: center;
+  border: 1px solid #01022b;
+}
+
+.modal_img {
+  width: 10em;
+  object-fit: contain;
 }
 
 .item_select {

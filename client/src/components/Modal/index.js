@@ -12,9 +12,23 @@ function Modal() {
             <div className="modal_description">
                 <div className="modal_item">
                     <h4 className="modal_title1">Salmon</h4>
-                    <img src='Images/salmon.jpeg' alt='Salmon ' className="modal_img" />
-                    <p className="modal_price">2500</p>
+                    <img className="modal_img" src='Images/salmon.jpeg' alt='Salmon' />
+                    <p className="modal_price">Price: 2500</p>
                 </div>
+                <div className="modal_item">
+                    <h4 className="modal_title1">Salmon</h4>
+                    <img className="modal_img" src='Images/salmon.jpeg' alt='Salmon' />
+                    <p className="modal_price">Price: 2500</p>
+                </div>
+                <div className="modal_item">
+                    <h4 className="modal_title1">Salmon</h4>
+                    <img className="modal_img" src='Images/salmon.jpeg' alt='Salmon' />
+                    <p className="modal_price">Price: 2500</p>
+                </div>
+
+
+
+
             </div>
         </div>
     )
