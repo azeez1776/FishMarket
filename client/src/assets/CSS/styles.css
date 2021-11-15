@@ -136,7 +136,7 @@
 }
 
 .modal {
-  width: 20em;
+  width: 30em;
   border: 1px solid #003049;
   margin: 5em;
   display: flex;
@@ -156,13 +156,15 @@
 }
 
 .modal_title {
+  text-align: center;
   color: white;
 }
 
 .modal_item {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   border: 1px solid #003049;
+  height: 5em;
 }
 
 .modal_img {
