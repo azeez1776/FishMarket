@@ -169,7 +169,13 @@
 
 .modal_img {
   width: 10em;
-  object-fit: contain;
+  height: 4.95em;
+  border: 1px solid #003049;
+  margin-right: 5em;
+}
+
+.modal_price {
+  margin-left: 5em;
 }
 
 .item_select {
