@@ -5,6 +5,7 @@ const ItemSchema = require('../../model/Item')
 
 const router = express.Router()
 
+//gets the items
 router.get('/', async (req, res) => {
     try {
         const items = await ItemSchema.find({})
@@ -15,6 +16,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+//posts the items
 router.post('/', async (req, res) => {
 
     const { name, description, price, img } = req.body;
@@ -36,6 +38,7 @@ router.post('/', async (req, res) => {
     }
 })
 
+//updates the items
 router.put('/:id', async (req, res) => {
     const { name, description, price, img } = req.body;
     const itemField = {};
@@ -63,6 +66,8 @@ router.put('/:id', async (req, res) => {
         res.status(500).send(error)
     }
 })
+
+//deletes the items
 
 router.delete('/:id', async (req, res) => {
     try {
