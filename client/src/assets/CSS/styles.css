@@ -110,7 +110,7 @@
 
 .basket_dot,
 .basket_zero {
-  background-color: red;
+  background-color: c1121f;
   object-fit: contain;
   width: 1.5em;
   height: 1.5em;
@@ -172,6 +172,15 @@
   height: 4.95em;
   border: 1px solid #003049;
   margin-right: 5em;
+}
+
+.modal_btn {
+  height: 3em;
+  width: 1em;
+  background-color: #c1121f;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
 }
 
 .modal_price {
