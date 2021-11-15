@@ -47,7 +47,7 @@
 
 .item_btn,
 .item_btn_1 {
-  background-color: #780000;
+  background-color: #003049;
   border: 0;
   color: white;
   height: 2em;
@@ -58,7 +58,7 @@
 .item_btn:hover,
 .item_btn_1:hover {
   cursor: pointer;
-  background-color: #c1121f;
+  background-color: #014266fd;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
