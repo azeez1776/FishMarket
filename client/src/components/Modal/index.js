@@ -4,6 +4,11 @@ import '../../assets/CSS/styles.css'
 function Modal() {
 
 
+    const cartItemTitle = localStorage.getItem('cartItemTitle');
+    const cartItemPrice = localStorage.getItem('cartItemPrice');
+    const cartItemImage = localStorage.getItem('cartItemImage')
+
+
     return (
         <div className="modal">
             <div className="modal_header">

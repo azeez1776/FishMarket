@@ -20,9 +20,7 @@ function ItemDetail() {
     const onCall = () => {
         localStorage.setItem('cartItemTitle', itemTitle);
         localStorage.setItem('cartItemPrice', itemPrice);
-        localStorage.setItem('cartItemDescription', itemDescription);
         localStorage.setItem('cartItemImage', itemImg);
-
         dispatch(increment());
     }
 
