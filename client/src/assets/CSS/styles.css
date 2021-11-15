@@ -164,7 +164,7 @@
   display: flex;
   justify-content: flex-start;
   border: 1px solid #003049;
-  height: 5em;
+  height: 6em;
 }
 
 .modal_img {
@@ -176,15 +176,19 @@
 
 .modal_btn {
   height: 3em;
-  width: 1em;
+  width: 6em;
   background-color: #c1121f;
   color: white;
   border: none;
   border-radius: 0.5em;
 }
 
-.modal_price {
+.modal_price_btn {
+  display: flex;
+  flex-direction: column;
   margin-left: 5em;
+}
+.modal_price {
 }
 
 .item_select {

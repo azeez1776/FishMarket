@@ -13,20 +13,26 @@ function Modal() {
                 <div className="modal_item">
                     <img className="modal_img" src='Images/salmon.jpeg' alt='Salmon' />
                     <h4 className="modal_title1">Salmon</h4>
-                    <p className="modal_price">Price: 2500</p>
-                    <button className="modal_btn">Remove</button>
+                    <div className="modal_price_btn">
+                        <p className="modal_price">Price: 2500</p>
+                        <button className="modal_btn">Remove</button>
+                    </div>
                 </div>
                 <div className="modal_item">
                     <img className="modal_img" src='Images/salmon.jpeg' alt='Salmon' />
                     <h4 className="modal_title1">Salmon</h4>
-                    <p className="modal_price">Price: 2500</p>
-                    <button className="modal_btn">Remove</button>
+                    <div className="modal_price_btn">
+                        <p className="modal_price">Price: 2500</p>
+                        <button className="modal_btn">Remove</button>
+                    </div>
                 </div>
                 <div className="modal_item">
                     <img className="modal_img" src='Images/salmon.jpeg' alt='Salmon' />
                     <h4 className="modal_title1">Salmon</h4>
-                    <p className="modal_price">Price: 2500</p>
-                    <button className="modal_btn">Remove</button>
+                    <div className="modal_price_btn">
+                        <p className="modal_price">Price: 2500</p>
+                        <button className="modal_btn">Remove</button>
+                    </div>
                 </div>
 
 
