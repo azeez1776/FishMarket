@@ -146,7 +146,6 @@
 .modal_div {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .modal_header {
@@ -169,7 +168,7 @@
 
 .modal_img {
   width: 10em;
-  height: 4.95em;
+  height: 5.95em;
   border: 1px solid #003049;
   margin-right: 5em;
 }
@@ -181,6 +180,11 @@
   color: white;
   border: none;
   border-radius: 0.5em;
+}
+
+.modal_btn:hover {
+  cursor: pointer;
+  background-color: #780000;
 }
 
 .modal_price_btn {
