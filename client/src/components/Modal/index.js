@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../assets/CSS/styles.css'
 
 function Modal() {
+
+    const [cartItem, setCartItem] = useState([]);
 
 
     const cartItemTitle = localStorage.getItem('cartItemTitle');
