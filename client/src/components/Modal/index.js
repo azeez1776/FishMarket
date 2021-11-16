@@ -3,13 +3,13 @@ import '../../assets/CSS/styles.css'
 
 function Modal() {
 
-    const [cartItem, setCartItem] = useState([]);
 
 
     const cartItemTitle = localStorage.getItem('cartItemTitle');
     const cartItemPrice = localStorage.getItem('cartItemPrice');
     const cartItemImage = localStorage.getItem('cartItemImage')
 
+    const [cartItem, setCartItem] = useState([]);
 
     return (
         <div className="modal">
